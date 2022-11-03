@@ -19,6 +19,7 @@ def run_twitter_etl(username='jack', num_tweets=100):
                             tweet.replyCount, 
                             tweet.retweetCount,
                             tweet.likeCount,
+                            tweet.quoteCount,
                             tweet.user.username])
         
     # Creating a dataframe from the tweets list above 
@@ -27,9 +28,10 @@ def run_twitter_etl(username='jack', num_tweets=100):
                                             'text', 
                                             'reply_count', 
                                             'retweet_count', 
-                                            'like_count', 
+                                            'like_count',
+                                            'quote_count', 
                                             'username'])
     df.to_csv('{}_tweets.csv'.format(username), index=False)
 
-# username = 'ditoks'
-# run_twitter_etl(username=username)
+# username = 'ecommurz'
+# run_twitter_etl(username)

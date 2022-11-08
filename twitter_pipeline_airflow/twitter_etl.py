@@ -31,7 +31,7 @@ def run_twitter_etl(username='jack', num_tweets=100):
                                             'like_count',
                                             'quote_count', 
                                             'username'])
-    df.to_csv('{}_tweets.csv'.format(username), index=False)
+    df.to_csv('s3://twitter-airflow-project/{}_tweets.csv'.format(username), index=False)
 
 # username = 'ecommurz'
 # run_twitter_etl(username)

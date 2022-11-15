@@ -36,5 +36,5 @@ def run_twitter_etl(username='jack', num_tweets=100):
                                             'username'])
     df.to_csv('{}_{}_tweets.csv'.format(username, today), index=False)
 
-username = 'ecommurz'
-run_twitter_etl(username)
+# username = 'ecommurz'
+# run_twitter_etl(username)

@@ -1,6 +1,7 @@
 import pandas as pd 
 import snscrape.modules.twitter as sntwitter
 import s3fs 
+from datetime import date
 
 def run_twitter_etl(username='jack', num_tweets=100):
     '''
@@ -8,6 +9,8 @@ def run_twitter_etl(username='jack', num_tweets=100):
     '''
     # Creating list to append tweet data to
     tweets_list = []
+
+    today = str(date.today())
 
     # Using TwitterSearchScraper to scrape data and append tweets to list
     for i,tweet in enumerate(sntwitter.TwitterSearchScraper('from:{}'.format(username)).get_items()):
@@ -31,7 +34,7 @@ def run_twitter_etl(username='jack', num_tweets=100):
                                             'like_count',
                                             'quote_count', 
                                             'username'])
-    df.to_csv('s3://twitter-airflow-project/{}_tweets.csv'.format(username), index=False)
+    df.to_csv('{}_{}_tweets.csv'.format(username, today), index=False)
 
-# username = 'ecommurz'
-# run_twitter_etl(username)
+username = 'ecommurz'
+run_twitter_etl(username)

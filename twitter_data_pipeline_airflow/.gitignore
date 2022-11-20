@@ -1,2 +1,4 @@
+airflow_cred.txt
 .twt-env/
 *.csv
+*.pem

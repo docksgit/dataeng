@@ -1,7 +1,7 @@
-# Twitter Data Pipeline Project
+# Basic Twitter Data Pipeline Project
 
 ## Overview
-This project is initiated to make a data pipeline from a public/unprotected Twitter account timeline as being scrapped and then being placed in a cloud storage (AWS S3 Bucket) as parquet file through Airflow running on cloud server (AWS EC2 Instance).
+This project is initiated to make a data pipeline to perform ETL process from a public/unprotected Twitter account timeline as being scrapped and then being placed in a cloud storage (AWS S3 Bucket) as parquet file through Airflow running on cloud server (AWS EC2 Instance).
 
 ## Main Requirements
 1. AWS EC2 Instance -> Airflow server

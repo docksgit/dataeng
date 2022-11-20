@@ -34,7 +34,7 @@ def run_twitter_etl(username='jack', num_tweets=100):
                                             'like_count',
                                             'quote_count', 
                                             'username'])
-    df.to_csv('{}_{}_tweets.csv'.format(username, today), index=False)
+    df.to_parquet('s3://southgate-airflow-bucket/{}_{}_tweets.parquet.gzip'.format(username, today), index=False)
 
 # username = 'ecommurz'
 # run_twitter_etl(username)

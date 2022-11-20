@@ -13,9 +13,7 @@ This project is initiated to make a data pipeline from a public/unprotected Twit
 1. Create new virtual environment for this project -> `twt-env` (included in `.gitignore`)
 2. Install `requirements.txt`
 3. Draft the `twitter_etl.py` file
-4. Setup AWS EC2 Instance as Airflow server
-  1. Create key pair
-  2. Set rule for incoming traffic control
+4. Setup AWS EC2 Instance as Airflow server -> Create key pair and set rule for incoming traffic control 
 5. Install package in the server -> `package_install.sh`
 6. Draft the `twitter_dag.py`
 7. Setup AWS S3 Bucket as data storage 

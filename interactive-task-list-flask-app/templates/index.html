@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task List</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center;">Task List</h1>
+    {% if tasks|length < 1 %}
+    <h4 style="text-align: center;">There are no tasks listed. Create one below!</h4>
+    {% else %}
+    <table>
+        <tr>
+            <th>Tasks</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.content }}</td>
+            <td>{{ task.date_created }}</td>
+            <td>
+                <a href="/remove/{{task.id}}">Remove</a>
+                <br>
+                <a href="/update/{{task.id}}">Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <div>
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Add Task">
+        </form>
+    </div>
+</div>
+{% endblock %}

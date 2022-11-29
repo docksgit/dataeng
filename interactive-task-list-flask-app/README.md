@@ -17,6 +17,6 @@ This app is a basic crud app developed using Flask to simulate managing simple t
     `>>> py` \
     `>>> from app import db` \
     `>>> db.create_all()` \
-    `>>> exit()` \
+    `>>> exit()` 
 5. Try run `py app.py` and open `http://127.0.0.1:5000/` in a browser or as the command output shown
 6. The app should be work to input, update, and remove tasks

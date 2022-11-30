@@ -24,3 +24,4 @@ This project is initiated to make a data pipeline to perform ETL process from a 
 12. Open `Public IPv4 DNS`+`:8080` in a browser
 13. Login using Airflow credential 
 14. The DAG should be included over there and ready to manage
+15. After the DAG run, the specified data should be created and transfered into S3 Bucket

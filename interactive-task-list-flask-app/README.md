@@ -13,10 +13,11 @@ This app is a basic crud app developed using Flask to simulate managing simple t
 1. Create new virtual environment for this project -> `env` (included in `.gitignore`)
 2. Install `requirements.txt`
 3. Draft the `app.py`, `base.html`, `index.html`, `update.html` and `main.css` file
-4. Create sqlite database in terminal \
-    `>>> py` \
+4. Create sqlite database in terminal on the project directory\
+    `py` \
     `>>> from app import db` \
     `>>> db.create_all()` \
     `>>> exit()` 
 5. Try run `py app.py` and open `http://127.0.0.1:5000/` in a browser or as the command output shown
 6. The app should be work to input, update, and remove tasks
+7. To further and easier access, we can deploy the app into Heroku or Vercel
